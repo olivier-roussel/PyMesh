@@ -54,7 +54,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Add pybind11
-add_subdirectory(${PROJECT_SOURCE_DIR}/third_party/pybind11)
+set(PYBIND11_FINDPYTHON ON)
+find_package(pybind11 CONFIG REQUIRED)
 
 ## Setup RPath
 set(CMAKE_MACOSX_RPATH ON)
