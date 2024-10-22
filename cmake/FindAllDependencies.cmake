@@ -40,7 +40,7 @@ if (NOT CGAL_FOUND)
         set(BOOST_ROOT ${PROJECT_SOURCE_DIR}/python/pymesh/third_party)
         find_package(Boost COMPONENTS atomic chrono date_time system thread)
     endif (NOT Boost_FOUND)
-    find_package(CGAL QUIET PATHS ${CGAL_DIRS} NO_DEFAULT_PATH)
+    find_package(CGAL PATHS ${CGAL_DIRS})
 endif (NOT CGAL_FOUND)
 
 # MMG
