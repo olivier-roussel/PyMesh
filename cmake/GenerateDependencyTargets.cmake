@@ -203,7 +203,6 @@ IF (CGAL_FOUND AND PYMESH_USE_CGAL AND NOT TARGET PyMesh::CGAL)
             ${CGAL_3RD_PARTY_DEFINITIONS}
             -DWITH_CGAL
             -DWITH_CGAL_COREFINEMENT
-            -DCGAL_CONCURRENT_MESH_3
     )
     IF (CGAL_HEADER_ONLY)
         # It seems CGAL does not capture this flag in ${CGAL_DEFINITIONS}...
