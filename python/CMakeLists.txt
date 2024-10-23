@@ -50,6 +50,7 @@ endif()
 
 if (TARGET PyMesh::IGL)
     target_link_libraries(PyMesh PRIVATE PyMesh::IGL)
+    target_include_directories(PyMesh SYSTEM PRIVATE ${LIBIGL_INCLUDE_DIRS})
 endif()
 
 if (TARGET PyMesh::Geogram)
@@ -68,5 +69,4 @@ target_include_directories(PyMesh SYSTEM PRIVATE
     ${PROJECT_SOURCE_DIR}/src
     ${PROJECT_SOURCE_DIR}/tools
     ${EIGEN_INCLUDE_DIRS}
-    ${EIGEN_INCLUDE_DIRS}/unsupported
-    ${LIBIGL_INCLUDE_DIRS})
+    ${EIGEN_INCLUDE_DIRS}/unsupported)
