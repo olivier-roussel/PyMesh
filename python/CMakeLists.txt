@@ -9,7 +9,6 @@ PYBIND11_ADD_MODULE(PyMesh module.cpp
     PyFEM.cpp
     PyGeogram.cpp
     PyHashGrid.cpp
-    PyIGL.cpp
     PyMeshUtils.cpp
     PyMesh.cpp
     PyMeshFactory.cpp
@@ -32,7 +31,6 @@ TARGET_LINK_LIBRARIES(PyMesh PRIVATE
     PyMesh::Tools::MeshUtils
     PyMesh::Tools::CGAL
     PyMesh::Tools::Geogram
-    PyMesh::Tools::IGL
     PyMesh::Tools::Predicates
     PyMesh::Tools::Compression
     PyMesh::Tools::ConvexHull
@@ -51,5 +49,4 @@ TARGET_INCLUDE_DIRECTORIES(PyMesh SYSTEM PRIVATE
     ${PROJECT_SOURCE_DIR}/src
     ${PROJECT_SOURCE_DIR}/tools
     ${EIGEN_INCLUDE_DIRS}
-    ${EIGEN_INCLUDE_DIRS}/unsupported
-    ${LIBIGL_INCLUDE_DIRS})
+    ${EIGEN_INCLUDE_DIRS}/unsupported)
